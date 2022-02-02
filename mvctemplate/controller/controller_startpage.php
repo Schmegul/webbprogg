@@ -1,0 +1,18 @@
+<?php
+
+class controller_startpage{
+
+  public $model;
+
+  public function __construct($model){
+
+
+    $this->model=$model;
+  }
+
+
+}
+
+
+
+?>

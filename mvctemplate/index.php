@@ -18,11 +18,12 @@ $url_parts=explode('/', $arrurl['path']);
 
 
 
-if($url_parts[2]==null || $url_parts[2]=="start"){
-  top();
-  nav();
-  start();
-  bottom();
+if($url_parts[2]==null){
+
+  $model = new Model_startpage();
+  $controller = new controller_startpage($model);
+  $view = new view_startpage($controller,$model);
+
 }
 
- ?>
+?>
