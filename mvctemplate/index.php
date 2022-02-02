@@ -17,7 +17,7 @@ $url_parts=explode('/', $arrurl['path']);
 //var_dump($url_parts);
 
 
-
+//:0
 if($url_parts[2]==null){
 
   $model = new Model_startpage();
