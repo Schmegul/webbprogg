@@ -25,11 +25,11 @@ var_dump($url_parts);
 
 
 //:0
-if($url_parts[3]=="start"){
+if($url_parts[3]==null){    //change {null} to {"start"}
 
   $model = new Model_startpage();
   $view = new view_startpage();
-  $controller = new controller_startpage($model.$view);
+  $controller = new controller_startpage($model,$view);
 
   if ($_GET["märke"]=="volvo") {
 

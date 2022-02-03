@@ -13,7 +13,7 @@ class model_startpage{
 
   public function getSaab(){
 
-    return array("hp"=>200,"color"=>"gul","reg"=>"bcd234");
+    //return array("hp"=>200,"color"=>"gul","reg"=>"bcd234");
   }
 
 

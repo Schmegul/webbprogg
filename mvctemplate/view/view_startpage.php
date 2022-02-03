@@ -14,7 +14,7 @@ class view_startpage{
     $this->topbottom->top();
 
     foreach ($KanVaraVadSomHelstMenHeterNuarrvolvo as $key => $value) {
-      echo "<h1>" $key.":".$value."</h1>";
+      echo "<h1>" .$key.":".$value."</h1>";
     }
 
 

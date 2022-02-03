@@ -13,7 +13,7 @@ class controller_startpage{
   }
 
 
-}
+
 public function showVolvo(){
 
   $arrvolvo=$this->model->getVolvo();
@@ -25,5 +25,5 @@ public function showSaab(){
 
 }
 
-
+}
 ?>
