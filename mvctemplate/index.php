@@ -8,21 +8,41 @@ header('Content-Type:text/html; charset=UTF-8');
 mb_internal_encoding('UTF-8');
 mb_http_output('UTF-8');
 
+require "controller/controller_startpage.php";
+require "model/model_startpage.php";
+require "view/page/topbottom.php";
+require "view/view_startpage.php";
+
+
+$url="http://localhost". $_SERVER['REQUEST_URI'];
 $arrurl=parse_url($url);
-//echo "<br><br>";
-//var_dump($arrurl);
+echo "<br><br>";
+var_dump($arrurl);
 
 $url_parts=explode('/', $arrurl['path']);
-//echo "<br><br>";
-//var_dump($url_parts);
+echo "<br><br>";
+var_dump($url_parts);
 
 
 //:0
-if($url_parts[2]==null){
+if($url_parts[3]=="start"){
 
   $model = new Model_startpage();
-  $controller = new controller_startpage($model);
-  $view = new view_startpage($controller,$model);
+  $view = new view_startpage();
+  $controller = new controller_startpage($model.$view);
+
+  if ($_GET["märke"]=="volvo") {
+
+    $controller->showVolvo();
+
+  }
+
+  if ($_GET["märke"]=="saab") {
+
+    $controller->showSaab();
+
+  }
+
 
 }
 
