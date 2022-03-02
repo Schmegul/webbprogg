@@ -23,7 +23,11 @@ HTML;
 
   }
   public function bottom(){
+
+ require "js/index.js";
+
 echo<<<HTML
+
 </body>
 </html>
 HTML;
