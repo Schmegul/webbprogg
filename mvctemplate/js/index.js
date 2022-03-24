@@ -3,6 +3,6 @@
 <script>
 
 $(".suga").click(function(){
-  $(".suga").hide();
+  $(this).next().show();    // next är barnet av .suga
   });
 </script>
