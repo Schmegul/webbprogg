@@ -14,18 +14,19 @@ public function __construct($model,$view){
 
 public function showVolvo(){
 
-     $arrVolvo=$this->model->getVolvoSpec();
+  $data=[
+     'super' => 1,
+  ];
+  $db = new dbcon();
+  $stmt= $db->pdo->prepare('select * from inlägg where :super=super');
+  $stmt->execute($data);
+  $super=$stmt->fetchAll();
 
-      $this->view->render($arrVolvo);
-
-
-}
-
-public function showSaab(){
-
-   $arrVolvo=$model->getVolvoSpec();
-}
-
+  foreach ($super as $post){
+  $this->view->printpost($post['in_pk']);
+  $this->model->rekursion($post['in_pk'], $this->view);
+    }
+  }
 }
 
  ?>
