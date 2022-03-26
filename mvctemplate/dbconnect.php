@@ -1,8 +1,12 @@
+<!--
+Databasanslutning
+-->
+
 <?php
 
 class dbcon {
 
-public $pdo;
+  public $pdo;
 
   public function __construct(){
 
@@ -23,10 +27,7 @@ public $pdo;
     } catch (\PDOException $e) {
       echo 'Connection failed: ' . $e->getMessage();
     }
-
-
-
   }
 }
 
-    ?>
+?>
