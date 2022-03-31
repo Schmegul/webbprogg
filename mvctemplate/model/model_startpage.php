@@ -30,7 +30,7 @@ class model_startpage{
     public function rekursion($id_pk, $view){   // printar ut förälderns kommentar och dess barn. När den är klar med en kommentar och dess barn kallar den på sig själv och ser om föräldern har ännu en kommentar, och om denna kommentar har kommentarer
       $barna=$this->haschild($id_pk);
       if(!empty($barna)){                       // om $barna inte är tom betyder det att kommentaren har barn och då exekveras loopen
-        echo '<div class="kommentar" style="margin-left:30px;border:3px solid blue;">';
+        echo '<div class="kommentar" style="margin-left:30px;border-left:3px solid blue;">';
         foreach ($barna as $barn) {
           $view->printchild($barn['in_pk']);      // kallar på printchild() i view_startpage.php för att printa ut barnet till kommentaren
           $this->rekursion($barn['in_pk'], $view);// kallar sedan på sig själv igen för att se om den nya kommentaren har barn. Om kommentaren inte har barn så går den tillbaka och ser om föräldern har fler barn utöver den nya kommentaren

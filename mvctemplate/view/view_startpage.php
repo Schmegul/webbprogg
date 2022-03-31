@@ -20,15 +20,17 @@ class view_startpage{
 
 echo <<<INLÄGG
 
-    <div style="height:200px;width:300px;background-color:green;">
+    <div style="height:230px;width:300px;border:3px solid black;">
     <h1>Skapa inlägg</h1><br>
-    <form method="post" action="inlägg.php" class="form" style="height:80px;width:200px;background-color:purple;">
-    <input type="text" name="Rubriker">
-    <input type="text" name="brödtexter">
+    <form method="post" action="inlägg.php" class="form" style="height:80px;width:200px;">
+    <input type="text" name="Rubriker" placeholder="Rubrik">
+    <input type="text" name="brödtexter" placeholder="Innehåll" style="width:200px;height:75px">
     <input type="hidden" name="fker"  value="1">
     <input type="submit">
     </form>
     </div>
+
+    <div style="margin-top:18px;border-bottom:3px solid black;"></div>
 
 INLÄGG;
 }
@@ -49,13 +51,13 @@ INLÄGG;
 
 echo <<<KOMMENTERA
 
-      <div style="width:300px;background-color:green;">
+      <div style="width:300px;border:3px solid black;margin-top:18px;margin-bottom:18px;margin-left:18px;">
       <h3 class="card-title">{$kommentar['Rubrik']}</h3>
       <p class="card-text">{$kommentar['Innehall']}</p>
       <div class="knapp" style="height:20px;width:86px;background-color:blue;cursor:pointer;">Kommentera</div>
-      <form method="post" action="kommentera.php" class="form" style="height:80px;width:200px;background-color:purple;display:none;">
-      <input type="text" name="Rubrik">
-      <input type="text" name="brödtext">
+      <form method="post" action="kommentera.php" class="form" style="height:80px;width:200px;display:none;">
+      <input type="text" name="Rubrik" placeholder="Rubrik">
+      <input type="text" name="brödtext" placeholder="Innehåll">
       <input type="hidden" name="fk" value="{$kommentar['in_pk']}">
       <input type="submit">
       </form>
@@ -82,13 +84,13 @@ KOMMENTERA;
 
 echo <<<SUPER
 
-      <div style="width:300px;background-color:green;">
+      <div style="width:300px;border:3px solid black;margin-top:18px;margin-bottom:18px;margin-left:18px;">
       <h3 class="card-title">{$super['Rubrik']}</h3>
       <p class="card-text">{$super['Innehall']}</p>
       <div class="knapp" style="height:20px;width:86px;background-color:blue;cursor:pointer;">Kommentera</div>
-      <form method="post" action="kommentera.php" class="form" style="height:80px;width:200px;background-color:purple;display:none;">
-      <input type="text" name="Rubrik">
-      <input type="text" name="brödtext">
+      <form method="post" action="kommentera.php" class="form" style="height:80px;width:200px;display:none;">
+      <input type="text" name="Rubrik" placeholder="Rubrik">
+      <input type="text" name="brödtext" placeholder="Innehåll">
       <input type="hidden" name="fk" value="{$super['in_pk']}">
       <input type="submit">
       </form>
