@@ -9,11 +9,11 @@
 
 		$testclean=$testclean."%";
 
-		$sql="SELECT * FROM geo_counties WHERE name LIKE :username";
+		$sql="SELECT * FROM geo_counties WHERE nameco LIKE :usernamer";
 
 
 		$stmt=$dbpdo->prepare($sql);
-		$stmt->bindParam(":username",$testclean,PDO::PARAM_STR);
+		$stmt->bindParam(":usernamer",$testclean,PDO::PARAM_STR);
 		$stmt->execute();
 
 		$dbarray=$stmt->fetchAll(PDO::FETCH_ASSOC);

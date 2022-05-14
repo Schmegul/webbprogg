@@ -6,7 +6,7 @@
 	echo"<body>";
 	echo"<form name=\"myForm\" method=\"GET\">";
 	echo"sök: <input type=\"text\" id=\"target\" name=\"username\" autocomplete=\"off\" /> <br/>";
-	echo"sök: <input type=\"text\" id=\"targeter\" name=\"username\" autocomplete=\"off\" /> <br/>";
+	echo"sök: <input type=\"text\" id=\"targeter\" name=\"usernamer\" autocomplete=\"off\" /> <br/>";
 	echo"<input type=\"hidden\" name=\"time\" />  ";
 	echo"</form>";
 	echo"<div id =\"ajaxsvar\"></div> ";
@@ -23,12 +23,13 @@
 			console.log(size);
 			for (i = 0; i < size; i++) {
 
-				newtext=newtext+""+ data[i].name+ "<br>" ;
+				newtext=newtext+""+ data[i].namemu+ "<br>" ;
 			}
 			if(newtext=="<h1>Kommuner:</h1>"){
 				newtext="";
 			}
 			$( "#ajaxsvar" ).html( newtext );
+			// bara ta: $( "#ajaxsvar" ).html( data );
 
 
 
@@ -43,7 +44,7 @@
 			console.log(sizer);
 			for (k = 0; k < sizer; k++) {
 
-				newtexter=newtexter+""+ datar[k].name+ "<br>" ;
+				newtexter=newtexter+""+ datar[k].nameco+ "<br>" ;
 			}
 			if(newtexter=="<h1>Län:</h1>"){
 				newtexter="";

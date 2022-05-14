@@ -8,10 +8,6 @@ sätter ihop bloggdelen och sedan stängs html koden igen.
 
 <?php
 
-header('Content-Type:text/html; charset=UTF-8');
-mb_internal_encoding('UTF-8');
-mb_http_output( 'UTF-8');
-
 require "controller/controller_startpage.php";    // tillgång till de andra filerna
 require "model/model_startpage.php";
 require "view/page/startbottom.php";

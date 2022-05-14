@@ -7,9 +7,9 @@
 		$dbpdo=anslutdb();
 		$testclean = filter_input(INPUT_GET, 'test', FILTER_SANITIZE_STRING);
 
-		$testclean=$testclean."%";
+		$testclean="%".$testclean."%";
 
-		$sql="SELECT * FROM geo_municipalities WHERE name LIKE :username";
+		$sql="SELECT * FROM geo_municipalities WHERE namemu LIKE :username";
 
 
 		$stmt=$dbpdo->prepare($sql);
@@ -17,11 +17,10 @@
 		$stmt->execute();
 
 		$dbarray=$stmt->fetchAll(PDO::FETCH_ASSOC);
+
+																// V ta bort V
 		echo json_encode( $dbarray,JSON_PRETTY_PRINT );
 
-
-	}else{
-	echo json_encode( array( "name"=>"John","time"=>"2pm" ) );
 
 	}
 
