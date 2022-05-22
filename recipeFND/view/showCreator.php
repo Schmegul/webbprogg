@@ -18,8 +18,8 @@ echo<<<CREATOR
 
       <h3 style="border-bottom:3px solid black;">Rubrik</h3><textarea placeholder="Rubrik" id="rubrik" name="rubrik" style="font-size:20px;width:300px;"></textarea><br>
       <h3 style="border-bottom:3px solid black;">Beskrivning</h3><textarea placeholder="Beskrivning" id="beskrivning" name="beskrivning"></textarea><br>
-      <h3 style="border-bottom:3px solid black;">Mängd Ingridienser (skriv &lt;br> efter varje listad ingridiens)</h3><textarea placeholder="Mängd Ingridienser" id="ingridienser" name="ingridienser"></textarea><br>
-      <h3 style="border-bottom:3px solid black;">Utförande (skriv &lt;br>&lt;br> efter varje steg)</h3><textarea placeholder="Utförande" id="utförande" name="utförande"></textarea><br>
+      <h3 style="border-bottom:3px solid black;">Mängd Ingridienser</h3><textarea placeholder="Mängd Ingridienser" id="ingridienser" name="ingridienser"></textarea><br>
+      <h3 style="border-bottom:3px solid black;">Utförande</h3><textarea placeholder="Utförande" id="utförande" name="utförande"></textarea><br>
 
       <h3>Bocka i vilka ingridienser receptet innehåller</h3>
       <div style="display:flex;flex-wrap:wrap;">
