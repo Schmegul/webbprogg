@@ -1,3 +1,9 @@
+<!--
+Tre olika funktioner. De två första öppnar och stänger html-taggen samt innehåller generel
+css. Header funktionen skriver ut sökrutan som används för att leta recept samt länken
+som tar användaren till receptskaparen.
+-->
+
 <?php
 
 class view_startpage{
@@ -14,18 +20,44 @@ echo<<<HTMLÖPPNA
       inputcontainer{
         position:absolute;
       }
+      h1{
+        border-bottom:3px solid black;
+      }
       label{
         font-size:20px;
+      }
+      #beskrivning,#utförande,#ingridienser{
+        font-size:20px;
+        height:150px;
+        width:600px;
       }
       </style>
       <meta charset="utf-8">
       <title>blogg</title>
       </head>
       <body>
-      <h3>startpage toptext</h3><br>
+
+HTMLÖPPNA;
+    }
+
+    public function bottom(){ // funktionen som stänger html delen av sidan med en heredoc-tag
+
+echo<<<HTMLSTÄNG
+
+      </body>
+      </html>
+
+HTMLSTÄNG;
+    }
+
+    public function header(){
+
+echo<<<HEADER
+
+      <h1>Skapa eller sök redan existerande recept</h1>
+      <a href="http://localhost/webbprogg/recipeFND/create">Skapa ett nytt recept</a><br>
       <form method="post" style="height:80px;width:500px;background-color:green;">
       <input type="text" id="searchbar" name="searchbar" autocomplete="off"><br>
-
 
       <div style="display:flex;flex-wrap:wrap;">
       <div class="inputcontainer" style="margin-left:2%;"><input type="checkbox" id="potatis" name="potatis" value="1"><label for="potatis"> Potatis</label></div>
@@ -39,28 +71,14 @@ echo<<<HTMLÖPPNA
       <div class="inputcontainer" style="margin-left:2.4%;"><input type="checkbox" id="fisk" name="fisk" value="1"><label for="fisk"> Fisk</label></div>
       <div class="inputcontainer" style="margin-left:6.55%;"><input type="checkbox" id="halloumi" name="halloumi" value="1"><label for="halloumi"> Halloumi</label></div>
       <div class="inputcontainer" style="margin-left:2%;"><input type="checkbox" id="vilt" name="vilt" value="1"><label for="vilt"> Vilt</label></div>
-      </div><input type="submit" value="Submit">
-      </form>
+
+      <br><br></form>
+
+      <div id="resultatprint"></div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="javascript/js.js"></script>
 
-      <div id="resultatprint">test</div>
-
-HTMLÖPPNA;
-    }
-
-    public function bottom(){ // funktionen som stänger html delen av sidan med en heredoc-tag
-
-
-echo '<script src="javascript/js.js"></script>';
-
-echo<<<HTMLSTÄNG
-      <h3>startpage bottomtext</h3>
-      </body>
-      </html>
-
-HTMLSTÄNG;
+HEADER;
     }
   }
-
-
   ?>

@@ -1,3 +1,7 @@
+<!--
+Databasanslutning
+-->
+
 <?php
 
 class dbcon {
@@ -25,5 +29,4 @@ class dbcon {
     }
   }
 }
-
 ?>
