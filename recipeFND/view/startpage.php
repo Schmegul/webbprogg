@@ -33,7 +33,7 @@ echo<<<HTMLÖPPNA
       }
       </style>
       <meta charset="utf-8">
-      <title>blogg</title>
+      <title>Receptväljare</title>
       </head>
       <body>
 
