@@ -56,7 +56,7 @@ echo<<<HEADER
 
       <h1>Skapa eller sök redan existerande recept</h1>
       <a href="http://localhost/webbprogg/recipeFND/create">Skapa ett nytt recept</a><br>
-      <form method="post" style="height:80px;width:500px;background-color:green;">
+      <form method="post" style="height:80px;width:500px;background-color:yellow;">
       <input type="text" id="searchbar" name="searchbar" autocomplete="off"><br>
 
       <div style="display:flex;flex-wrap:wrap;">
